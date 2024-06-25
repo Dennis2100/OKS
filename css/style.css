@@ -1,0 +1,379 @@
+/* --- Farben --- /
+    #ddc6bc
+    #d4b4a0
+    #9e7659
+    #9a4b07
+    #702d08
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    width: 100%;
+    background-image: url(../image/wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    background-position: center;
+}
+
+header{
+    width: 100%;
+    background-color: #702d08;
+    padding: 10px;
+}
+
+nav{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#navigation{
+    display: flex;
+    justify-content: space-around;
+}
+
+.openMenu, .closeMenu{
+    display: none;
+}
+
+i{
+    color: white;
+    cursor: pointer;
+}
+
+#wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#obererHeader{
+    display: flex;
+    margin-top: 30px;
+}
+
+#obererHeader h1, #obererHeader h3{
+    color: white;
+    padding: 10px;
+}
+
+#main{
+    background-color: white;
+    padding: 20px;
+}
+
+#main a{
+    color: black;
+}
+
+#main button{
+    padding: 10px;
+    background-color: #702d08;
+    font-size: 15px;
+}
+
+#main button a{
+    color: white;
+}
+
+#content{
+    display: flex;
+}
+
+#mainImage img{
+    width: 70%;
+}
+
+#mainImage{
+    width: 70%;
+    text-align: center;
+}
+
+#mainText{
+    width: 80%;
+}
+
+hr{
+    margin: 10px 0;
+}
+
+/* --- Slider --- */
+.mySlides{
+    display: none;
+}
+
+img{
+    vertical-align: middle;
+}
+
+.slideshow-container{
+    width: 40%;
+    position: relative;
+    margin: auto;
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6 ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgb(0, 0, 0, 0.8);
+}
+
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.numbertext{
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot{
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: backgruond-color 0.6s ease;
+}
+
+.active, .dot:hover{
+    background-color: #717171;
+}
+
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* --- Responsive Slider --- */
+#main .slideshow-container a{
+    color: white;
+}
+
+footer{
+    width: 100%;
+    background-color: black;
+}
+
+#box{
+    padding: 50px 0;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+#Box{
+    width: 50%;
+}
+
+.contact{
+    width: 33%;
+}
+
+.formular{
+    display: flex;
+    flex-direction: column;
+    width: 34%;
+    text-align: center;
+}
+
+.formular input, .formular textarea, .formular button{
+    margin-top: 10px;
+    padding: 5px;
+}
+
+button{
+    cursor: pointer;
+    background-color: #702d08;
+    color: white;
+}
+
+.anfahrt img{
+    width: 60%;
+    margin: 10px auto;
+}
+
+.anfahrt{
+    text-align: right;
+    width: 33%;
+}
+
+#impressum li{
+    list-style: circle;
+    margin-left: 30px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 450px){
+    #obererHeader img{
+        width: 80%;
+    }
+    .slideshow-container{
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .prev, .next, .text{
+        font-size: 11px;
+    }
+
+    .dot{
+        height: 10px;
+        width: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .prev, .next, .text{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    #obererHeader h1{
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 800px){
+    nav #navigation {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #9a4b07;
+        transition: top 1s ease;
+        display: none;
+    }
+
+    nav #navigation .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+    }
+
+    nav .openMenu {
+        display: block;
+    }
+
+    nav i{
+        font-size: 25px;
+    }
+
+    .slideshow-container{
+        width: 100%;
+        position: relative;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 1300px){
+    #box{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .formular{
+        margin: 20px auto 0 auto;
+        width: 60%;
+    }
+
+    .contact{
+        width: 60%;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    .anfahrt{
+        text-align: left;
+        margin: 20px auto;
+        width: 60%;
+    }
+
+    .anfahrt img{
+        width: 70%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 750px) {
+    #beschreibung h3{
+        display: none;
+    }
+
+    #content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #mainText{
+        width: 100%;
+    }
+
+    #mainImage img{
+        width: 90%;
+    }
+
+    #mainImage{
+        margin-top: 20px;
+    }
+
+    .anfahrt img{
+        width: 100%;
+        margin: 10px auto;
+    }
+}
